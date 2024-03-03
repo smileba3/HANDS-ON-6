@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="icon">Santos</title>
+    <link rel="icon" href="Image/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/76eb6d9412.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Image/logo.png" alt="logo" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#hobbies">Hobbies</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I'm <span>Peter John Santos</span> <br> From Buenavista</h1>
+            </div>
+        </div>
+    </div>
+    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Image/Me.jpg" alt="image" class="me">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta deleniti laudantium, reprehenderit ratione, ex fugit eos dignissimos ullam at et quia atque, rerum ut eveniet asperiores suscipit perspiciatis id placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam nesciunt cumque quae est quaerat dicta veniam cum excepturi! Blanditiis ab consequuntur quis. Quos, et porro pariatur maiores vitae ipsum tenetur!</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('year')">Year</p>
+                        <p class="tab-links " onclick="opentab('age')">Age</p>
+                        <p class="tab-links" onclick="opentab('school')">School</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="year">
+                        <ul>
+                            <li><span>2001</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="age">
+                        <ul>
+                            <li><span>22 years old</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="school">
+                        <ul>
+                            <li><span>Saint Michael College of Caraga</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+    <div id="hobbies">
+        <div class="container">
+            <h1 class="sub-title">My Hobbies</h1>
+                <div class="hobbies-list">
+                    <div>
+                        <i class="fa-solid fa-basketball"></i>
+                        <h2>Basketball</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat laudantium neque quisquam perferendis nam. Animi dolore quis, possimus esse consequatur distinctio id quaerat error asperiores nam suscipit nulla neque! Nemo.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-gamepad"></i>
+                        <h2>Video Games</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat laudantium neque quisquam perferendis nam. Animi dolore quis, possimus esse consequatur distinctio id quaerat error asperiores nam suscipit nulla neque! Nemo.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Coding</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat laudantium neque quisquam perferendis nam. Animi dolore quis, possimus esse consequatur distinctio id quaerat error asperiores nam suscipit nulla neque! Nemo.</p>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>demecas13@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>09388551171</p>
+                    <div class="social-icon">
+                        <a href="https://www.facebook.com/smileba03"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="text" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; Santos. Made with <i class="fa-solid fa-heart"></i> this website</p>
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+    <script>
+
+        var sidemeu = document.getElementById('sidemenu');
+
+        function openmenu(){
+            sidemeu.style.right = "0";
+        }
+        function closemenu(){
+            sidemeu.style.right = "-200px";
+        }
+
+    </script>
+</body>
+</html>
